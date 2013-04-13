@@ -1,0 +1,22 @@
+{
+    "name": "wyrihaximus/phunin-cake",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "keywords": [
+        "munin",
+        "cakephp",
+        "munin-node"
+    ],
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com",
+            "homepage": "http://wyrihaximus.net/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "wyrihaximus/phunin-node": "dev-master",
+        "composer/installers": "*"
+    },
+}
