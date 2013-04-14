@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fc8672c4fbe7112688158bc7270bd0a2",
+    "hash": "12d5d175b93250d2cbd637e58e1f9133",
     "packages": [
         {
             "name": "composer/installers",
@@ -387,6 +387,51 @@
                 "reactor"
             ],
             "time": "2013-01-05 14:26:12"
+        },
+        {
+            "name": "react/zmq",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/zmq",
+                "reference": "v0.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/reactphp/zmq/archive/v0.1.1.zip",
+                "reference": "v0.1.1",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "1.0.*",
+                "ext-zmq": "*",
+                "php": ">=5.3.2",
+                "react/event-loop": "0.2.*"
+            },
+            "require-dev": {
+                "ext-pcntl": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "React\\ZMQ": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "ZeroMQ bindings for React.",
+            "keywords": [
+                "zeromq",
+                "zmq"
+            ],
+            "time": "2012-11-18 15:00:01"
         },
         {
             "name": "symfony/event-dispatcher",
