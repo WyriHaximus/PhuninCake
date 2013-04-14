@@ -28,6 +28,7 @@ class NodeShell extends Shell {
         $this->node->addPlugin(new \PhuninNode\Plugins\Plugins());
         $this->node->addPlugin(new \PhuninNode\Plugins\PluginsCategories());
         $this->node->addPlugin(new \PhuninNode\Plugins\MemoryUsage());
+        $this->node->addPlugin(new \PhuninNode\Plugins\Uptime());
         
         CakeEventManager::instance()->dispatch(new CakeEvent('PhuninCake.Node.construct', $this, array(
             'loop' => $this->loop,
