@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "wyrihaximus/phunin-node": "dev-master",
+        "wyrihaximus/phunin-node": "0.1.1",
         "react/zmq": "0.1.*",
         "composer/installers": "*"
     }

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "12d5d175b93250d2cbd637e58e1f9133",
+    "hash": "2fbf88b8268a130d77d120cc360f5fc7",
     "packages": [
         {
             "name": "composer/installers",
@@ -119,24 +119,29 @@
         },
         {
             "name": "guzzle/common",
-            "version": "v3.0.5",
+            "version": "v3.0.7",
             "target-dir": "Guzzle/Common",
             "source": {
                 "type": "git",
                 "url": "git://github.com/guzzle/common.git",
-                "reference": "v3.0.5"
+                "reference": "v3.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/common/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/common/archive/v3.0.7.zip",
+                "reference": "v3.0.7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/event-dispatcher": "2.1.*"
+                "symfony/event-dispatcher": ">=2.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Common": ""
@@ -154,30 +159,36 @@
                 "event",
                 "exception"
             ],
-            "time": "2012-11-19 00:15:33"
+            "time": "2012-12-19 23:06:35"
         },
         {
             "name": "guzzle/http",
-            "version": "v3.0.5",
+            "version": "v3.0.7",
             "target-dir": "Guzzle/Http",
             "source": {
                 "type": "git",
                 "url": "git://github.com/guzzle/http.git",
-                "reference": "v3.0.5"
+                "reference": "v3.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/http/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/http/archive/v3.0.7.zip",
+                "reference": "v3.0.7",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "guzzle/common": "self.version",
                 "guzzle/parser": "self.version",
                 "guzzle/stream": "self.version",
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Http": ""
@@ -203,27 +214,32 @@
                 "http",
                 "http client"
             ],
-            "time": "2012-11-18 05:28:55"
+            "time": "2012-12-14 00:49:17"
         },
         {
             "name": "guzzle/parser",
-            "version": "v3.0.5",
+            "version": "v3.0.7",
             "target-dir": "Guzzle/Parser",
             "source": {
                 "type": "git",
                 "url": "git://github.com/guzzle/parser.git",
-                "reference": "v3.0.5"
+                "reference": "v3.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/parser/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/parser/archive/v3.0.7.zip",
+                "reference": "v3.0.7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Parser": ""
@@ -242,21 +258,21 @@
                 "message",
                 "url"
             ],
-            "time": "2012-11-19 00:07:13"
+            "time": "2012-12-07 16:45:11"
         },
         {
             "name": "guzzle/stream",
-            "version": "v3.0.5",
+            "version": "v3.0.7",
             "target-dir": "Guzzle/Stream",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/stream",
-                "reference": "v3.0.5"
+                "reference": "v3.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/stream/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/stream/archive/v3.0.7.zip",
+                "reference": "v3.0.7",
                 "shasum": ""
             },
             "require": {
@@ -264,6 +280,11 @@
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Stream": ""
@@ -287,7 +308,7 @@
                 "component",
                 "stream"
             ],
-            "time": "2012-11-11 23:54:57"
+            "time": "2012-12-07 16:45:11"
         },
         {
             "name": "react/promise",
@@ -435,33 +456,38 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.1.9",
+            "version": "v2.2.1",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "v2.1.9"
+                "reference": "v2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.1.9",
-                "reference": "v2.1.9",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.2.1",
+                "reference": "v2.2.1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/dependency-injection": "2.1.*"
+                "symfony/dependency-injection": ">=2.0,<3.0"
             },
             "suggest": {
-                "symfony/dependency-injection": "2.1.*",
-                "symfony/http-kernel": "2.1.*"
+                "symfony/dependency-injection": "2.2.*",
+                "symfony/http-kernel": "2.2.*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\EventDispatcher": ""
+                    "Symfony\\Component\\EventDispatcher\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -480,20 +506,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-02-11 11:26:14"
+            "time": "2013-02-11 11:26:43"
         },
         {
             "name": "wyrihaximus/phunin-node",
-            "version": "dev-master",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "631aff83017ad4d42fc51f0b2445cd2ed136b89c"
+                "reference": "0.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/631aff83017ad4d42fc51f0b2445cd2ed136b89c",
-                "reference": "631aff83017ad4d42fc51f0b2445cd2ed136b89c",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/0.1.1",
+                "reference": "0.1.1",
                 "shasum": ""
             },
             "require": {
@@ -521,7 +547,7 @@
                 "munin",
                 "munin-node"
             ],
-            "time": "2013-04-11 19:44:02"
+            "time": "2013-04-25 20:06:22"
         }
     ],
     "packages-dev": [
@@ -531,9 +557,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wyrihaximus/phunin-node": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3.3"
     },
