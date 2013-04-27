@@ -1,22 +1,29 @@
 <?php
 
+/*
+ * This file is part of PhuninCake.
+ *
+ ** (c) 2013 Cees-Jan Kiewiet
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 App::uses('CakeEvent', 'Event');
 App::uses('CakeEventManager', 'Event');
 App::uses('Security', 'Utility');
-
-use React\EventLoop\Factory as LoopFactory;
 
 class NodeShell extends Shell {
     
     private $loop;
     private $node;
     
-    public function run() {
-        $this->loop = LoopFactory::create();
+    public function start() {
+        $this->loop = \React\EventLoop\Factory::create();
         
-        $this->runSetupNode();
+        $this->node = new \PhuninNode\Node($this->loop, Configure::read('PhuninCake.Node.connection.port'), Configure::read('PhuninCake.Node.connection.address'), false);
         
-        CakeEventManager::instance()->dispatch(new CakeEvent('PhuninCake.Node.run', $this, array(
+        CakeEventManager::instance()->dispatch(new CakeEvent('PhuninCake.Node.start', $this, array(
             'loop' => $this->loop,
             'node' => $this->node,
         )));
@@ -24,14 +31,6 @@ class NodeShell extends Shell {
         $this->runSetupKillSwitch();
         
         $this->loop->run();
-    }
-    
-    private function runSetupNode() {
-        $this->node = new \PhuninNode\Node($this->loop, Configure::read('PhuninCake.Node.connection.port'), Configure::read('PhuninCake.Node.connection.address'), false);
-        $this->node->addPlugin(new \PhuninNode\Plugins\Plugins());
-        $this->node->addPlugin(new \PhuninNode\Plugins\PluginsCategories());
-        $this->node->addPlugin(new \PhuninNode\Plugins\MemoryUsage());
-        $this->node->addPlugin(new \PhuninNode\Plugins\Uptime());
     }
     
     private function runSetupKillSwitch() {
