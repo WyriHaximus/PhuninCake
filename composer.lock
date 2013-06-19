@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "2fbf88b8268a130d77d120cc360f5fc7",
+    "hash": "3d94452555ea462d8e1a1699bb7c2169",
     "packages": [
         {
             "name": "composer/installers",
@@ -456,17 +456,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.2.1",
+            "version": "v2.3.1",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "v2.2.1"
+                "reference": "v2.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.2.1",
-                "reference": "v2.2.1",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.3.1",
+                "reference": "v2.3.1",
                 "shasum": ""
             },
             "require": {
@@ -476,13 +476,13 @@
                 "symfony/dependency-injection": ">=2.0,<3.0"
             },
             "suggest": {
-                "symfony/dependency-injection": "2.2.*",
-                "symfony/http-kernel": "2.2.*"
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -506,20 +506,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-02-11 11:26:43"
+            "time": "2013-05-13 14:36:40"
         },
         {
             "name": "wyrihaximus/phunin-node",
-            "version": "0.1.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "0.1.1"
+                "reference": "0.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/0.1.1",
-                "reference": "0.1.1",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/0.2.2",
+                "reference": "0.2.2",
                 "shasum": ""
             },
             "require": {
@@ -528,7 +528,8 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "PhuninNode": "src/"
+                    "PhuninNode\\Tests": "tests",
+                    "PhuninNode": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -547,7 +548,7 @@
                 "munin",
                 "munin-node"
             ],
-            "time": "2013-04-25 20:06:22"
+            "time": "2013-06-18 20:05:18"
         }
     ],
     "packages-dev": [
