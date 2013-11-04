@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3d94452555ea462d8e1a1699bb7c2169",
+    "hash": "4d900b0b3ee1327ae7bbd66a02648cf9",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.3",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "v1.0.3"
+                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.3",
-                "reference": "v1.0.3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
+                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
                 "shasum": ""
             },
             "replace": {
@@ -53,6 +53,7 @@
             "description": "A multi-framework Composer library installer",
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
+                "TYPO3 CMS",
                 "TYPO3 Flow",
                 "TYPO3 Neos",
                 "agl",
@@ -67,28 +68,28 @@
                 "li3",
                 "lithium",
                 "mako",
+                "modulework",
                 "phpbb",
                 "ppi",
                 "silverstripe",
                 "symfony",
                 "wordpress",
-                "yii",
                 "zend"
             ],
-            "time": "2013-03-02 22:45:58"
+            "time": "2013-08-20 04:37:09"
         },
         {
             "name": "evenement/evenement",
             "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/igorw/evenement",
-                "reference": "v1.0.0"
+                "url": "https://github.com/igorw/evenement.git",
+                "reference": "fa966683e7df3e5dd5929d984a44abfbd6bafe8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/igorw/evenement/zipball/v1.0.0",
-                "reference": "v1.0.0",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/fa966683e7df3e5dd5929d984a44abfbd6bafe8d",
+                "reference": "fa966683e7df3e5dd5929d984a44abfbd6bafe8d",
                 "shasum": ""
             },
             "require": {
@@ -115,120 +116,21 @@
             "keywords": [
                 "event-dispatcher"
             ],
-            "time": "2012-05-30 08:01:08"
-        },
-        {
-            "name": "guzzle/common",
-            "version": "v3.0.7",
-            "target-dir": "Guzzle/Common",
-            "source": {
-                "type": "git",
-                "url": "git://github.com/guzzle/common.git",
-                "reference": "v3.0.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/guzzle/common/archive/v3.0.7.zip",
-                "reference": "v3.0.7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/event-dispatcher": ">=2.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle\\Common": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Common libraries used by Guzzle",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "collection",
-                "common",
-                "event",
-                "exception"
-            ],
-            "time": "2012-12-19 23:06:35"
-        },
-        {
-            "name": "guzzle/http",
-            "version": "v3.0.7",
-            "target-dir": "Guzzle/Http",
-            "source": {
-                "type": "git",
-                "url": "git://github.com/guzzle/http.git",
-                "reference": "v3.0.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/guzzle/http/archive/v3.0.7.zip",
-                "reference": "v3.0.7",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "guzzle/common": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/stream": "self.version",
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle\\Http": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "HTTP libraries used by Guzzle",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "client",
-                "curl",
-                "http",
-                "http client"
-            ],
-            "time": "2012-12-14 00:49:17"
+            "time": "2012-05-30 15:01:08"
         },
         {
             "name": "guzzle/parser",
-            "version": "v3.0.7",
+            "version": "v3.7.4",
             "target-dir": "Guzzle/Parser",
             "source": {
                 "type": "git",
-                "url": "git://github.com/guzzle/parser.git",
-                "reference": "v3.0.7"
+                "url": "https://github.com/guzzle/parser.git",
+                "reference": "a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/parser/archive/v3.0.7.zip",
-                "reference": "v3.0.7",
+                "url": "https://api.github.com/repos/guzzle/parser/zipball/a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2",
+                "reference": "a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +139,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.7-dev"
                 }
             },
             "autoload": {
@@ -258,57 +160,7 @@
                 "message",
                 "url"
             ],
-            "time": "2012-12-07 16:45:11"
-        },
-        {
-            "name": "guzzle/stream",
-            "version": "v3.0.7",
-            "target-dir": "Guzzle/Stream",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/stream",
-                "reference": "v3.0.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/guzzle/stream/archive/v3.0.7.zip",
-                "reference": "v3.0.7",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/common": "self.version",
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle\\Stream": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle stream wrapper component",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "component",
-                "stream"
-            ],
-            "time": "2012-12-07 16:45:11"
+            "time": "2013-07-11 22:46:03"
         },
         {
             "name": "react/promise",
@@ -316,12 +168,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "v1.0.4"
+                "reference": "d6de8cae1dbb4878d909c41cb89aff764504472c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/v1.0.4",
-                "reference": "v1.0.4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/d6de8cae1dbb4878d909c41cb89aff764504472c",
+                "reference": "d6de8cae1dbb4878d909c41cb89aff764504472c",
                 "shasum": ""
             },
             "require": {
@@ -355,24 +207,23 @@
         },
         {
             "name": "react/react",
-            "version": "v0.2.7",
+            "version": "v0.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/react",
-                "reference": "v0.2.7"
+                "url": "https://github.com/reactphp/react.git",
+                "reference": "210c11a6041cfa2ce1701a4870b69475d9081265"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/reactphp/react/archive/v0.2.7.zip",
-                "reference": "v0.2.7",
+                "url": "https://api.github.com/repos/reactphp/react/zipball/210c11a6041cfa2ce1701a4870b69475d9081265",
+                "reference": "210c11a6041cfa2ce1701a4870b69475d9081265",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "1.0.*",
-                "guzzle/http": "3.0.*",
-                "guzzle/parser": "3.0.*",
+                "guzzle/parser": "~3.0",
                 "php": ">=5.3.3",
-                "react/promise": "1.0.*"
+                "react/promise": "~1.0"
             },
             "replace": {
                 "react/cache": "self.version",
@@ -381,16 +232,17 @@
                 "react/http": "self.version",
                 "react/http-client": "self.version",
                 "react/socket": "self.version",
+                "react/socket-client": "self.version",
                 "react/stream": "self.version"
             },
-            "require-dev": {
+            "suggest": {
                 "ext-libev": "*",
                 "ext-libevent": "*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2-dev"
+                    "dev-master": "0.3-dev"
                 }
             },
             "autoload": {
@@ -407,27 +259,27 @@
                 "event-loop",
                 "reactor"
             ],
-            "time": "2013-01-05 14:26:12"
+            "time": "2013-07-09 01:55:25"
         },
         {
             "name": "react/zmq",
-            "version": "v0.1.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/zmq",
-                "reference": "v0.1.1"
+                "url": "https://github.com/reactphp/zmq.git",
+                "reference": "b69d97f99f2127e27d130d7fe3b2cec2a63b2c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/reactphp/zmq/archive/v0.1.1.zip",
-                "reference": "v0.1.1",
+                "url": "https://api.github.com/repos/reactphp/zmq/zipball/b69d97f99f2127e27d130d7fe3b2cec2a63b2c4e",
+                "reference": "b69d97f99f2127e27d130d7fe3b2cec2a63b2c4e",
                 "shasum": ""
             },
             "require": {
-                "evenement/evenement": "1.0.*",
+                "evenement/evenement": "~1.0",
                 "ext-zmq": "*",
                 "php": ">=5.3.2",
-                "react/event-loop": "0.2.*"
+                "react/event-loop": "0.3.*"
             },
             "require-dev": {
                 "ext-pcntl": "*"
@@ -435,7 +287,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1-dev"
+                    "dev-master": "0.2-dev"
                 }
             },
             "autoload": {
@@ -452,78 +304,24 @@
                 "zeromq",
                 "zmq"
             ],
-            "time": "2012-11-18 15:00:01"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "v2.3.1",
-            "target-dir": "Symfony/Component/EventDispatcher",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "v2.3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.3.1",
-                "reference": "v2.3.1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "symfony/dependency-injection": ">=2.0,<3.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2013-05-13 14:36:40"
+            "time": "2013-09-18 11:02:06"
         },
         {
             "name": "wyrihaximus/phunin-node",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "0.2.2"
+                "reference": "21c253957ae773b9e40d7b5c67fb1a3f75617856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/0.2.2",
-                "reference": "0.2.2",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/21c253957ae773b9e40d7b5c67fb1a3f75617856",
+                "reference": "21c253957ae773b9e40d7b5c67fb1a3f75617856",
                 "shasum": ""
             },
             "require": {
-                "react/react": "0.2.*"
+                "react/react": "0.3.*"
             },
             "type": "library",
             "autoload": {
@@ -540,7 +338,8 @@
                 {
                     "name": "Cees-Jan Kiewiet",
                     "email": "ceesjank@gmail.com",
-                    "homepage": "http://wyrihaximus.net/"
+                    "homepage": "http://wyrihaximus.net/",
+                    "role": "Maintainer"
                 }
             ],
             "description": "munin-node in PHP",
@@ -548,7 +347,7 @@
                 "munin",
                 "munin-node"
             ],
-            "time": "2013-06-18 20:05:18"
+            "time": "2013-11-04 13:29:59"
         }
     ],
     "packages-dev": [
