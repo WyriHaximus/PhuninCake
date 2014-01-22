@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4d900b0b3ee1327ae7bbd66a02648cf9",
+    "hash": "b56c44990667185862e70ffeceaf3fd4",
     "packages": [
         {
             "name": "composer/installers",
@@ -46,7 +46,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
@@ -120,17 +120,17 @@
         },
         {
             "name": "guzzle/parser",
-            "version": "v3.7.4",
+            "version": "v3.8.0",
             "target-dir": "Guzzle/Parser",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/parser.git",
-                "reference": "a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2"
+                "reference": "77cae6425bc3466e1e47bdf6d2eebc15a092dbcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/parser/zipball/a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2",
-                "reference": "a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2",
+                "url": "https://api.github.com/repos/guzzle/parser/zipball/77cae6425bc3466e1e47bdf6d2eebc15a092dbcc",
+                "reference": "77cae6425bc3466e1e47bdf6d2eebc15a092dbcc",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
                 "message",
                 "url"
             ],
-            "time": "2013-07-11 22:46:03"
+            "time": "2013-10-24 00:04:09"
         },
         {
             "name": "react/promise",
@@ -308,26 +308,32 @@
         },
         {
             "name": "wyrihaximus/phunin-node",
-            "version": "0.2.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "21c253957ae773b9e40d7b5c67fb1a3f75617856"
+                "reference": "4de7c41165fa81ad095e13e6fa16a1dc1d557b3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/21c253957ae773b9e40d7b5c67fb1a3f75617856",
-                "reference": "21c253957ae773b9e40d7b5c67fb1a3f75617856",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/4de7c41165fa81ad095e13e6fa16a1dc1d557b3e",
+                "reference": "4de7c41165fa81ad095e13e6fa16a1dc1d557b3e",
                 "shasum": ""
             },
             "require": {
                 "react/react": "0.3.*"
             },
+            "require-dev": {
+                "phpunit/php-code-coverage": "1.3.*@dev",
+                "phpunit/phpunit": "3.8.*@dev",
+                "phpunit/phpunit-mock-objects": "1.3.*@dev",
+                "satooshi/php-coveralls": "~0.6"
+            },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "PhuninNode\\Tests": "tests",
-                    "PhuninNode": "src"
+                    "WyriHaximus\\PhuninNode": "src/",
+                    "WyriHaximus\\PhuninNode\\Tests": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -347,7 +353,7 @@
                 "munin",
                 "munin-node"
             ],
-            "time": "2013-11-04 13:29:59"
+            "time": "2014-01-21 22:02:54"
         }
     ],
     "packages-dev": [
@@ -357,9 +363,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "wyrihaximus/phunin-node": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },

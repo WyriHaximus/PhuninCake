@@ -21,7 +21,7 @@ class NodeShell extends Shell {
     public function start() {
         $this->loop = \React\EventLoop\Factory::create();
         
-        $this->node = new \PhuninNode\Node($this->loop, Configure::read('PhuninCake.Node.connection.port'), Configure::read('PhuninCake.Node.connection.address'), false);
+        $this->node = new \WyriHaximus\PhuninNode\Node($this->loop, Configure::read('PhuninCake.Node.connection.port'), Configure::read('PhuninCake.Node.connection.address'), false);
         
         CakeEventManager::instance()->dispatch(new CakeEvent('PhuninCake.Node.start', $this, array(
             'loop' => $this->loop,

@@ -20,9 +20,9 @@ class PhuninCakeStockPluginsListener implements CakeEventListener {
     }
 
     public function start($event) {
-        $event->data['node']->addPlugin(new \PhuninNode\Plugins\Plugins());
-        $event->data['node']->addPlugin(new \PhuninNode\Plugins\PluginsCategories());
-        $event->data['node']->addPlugin(new \PhuninNode\Plugins\MemoryUsage());
-        $event->data['node']->addPlugin(new \PhuninNode\Plugins\Uptime());
+        $event->data['node']->addPlugin(new \WyriHaximus\PhuninNode\Plugins\Plugins());
+        $event->data['node']->addPlugin(new \WyriHaximus\PhuninNode\Plugins\PluginsCategories());
+        $event->data['node']->addPlugin(new \WyriHaximus\PhuninNode\Plugins\MemoryUsage());
+        $event->data['node']->addPlugin(new \WyriHaximus\PhuninNode\Plugins\Uptime());
     }
 }
