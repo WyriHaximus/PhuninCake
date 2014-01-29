@@ -1,6 +1,10 @@
 PhuninCake
 ==========
 
+[![Build Status](https://travis-ci.org/WyriHaximus/PhuninCake.png)](https://travis-ci.org/WyriHaximus/PhuninCake)
+[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/Phunin-Cake/v/stable.png)](https://packagist.org/packages/WyriHaximus/Phunin-Cake)
+[![Total Downloads](https://poser.pugx.org/WyriHaximus/Phunin-Cake/downloads.png)](https://packagist.org/packages/WyriHaximus/Phunin-Cake)
+[![Coverage Status](https://coveralls.io/repos/WyriHaximus/Phunin-Cake/badge.png)](https://coveralls.io/r/WyriHaximus/Phunin-Cake)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/WyriHaximus/phunincake/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 PhuninNode CakePHP plugin wrapper
