@@ -1,22 +1,32 @@
 {
-    "name": "wyrihaximus/phunin-cake",
-    "type":"cakephp-plugin",
-    "license": "MIT",
-    "keywords": [
-        "munin",
-        "cakephp",
-        "munin-node"
-    ],
-    "authors": [
-        {
-            "name": "Cees-Jan Kiewiet",
-            "email": "ceesjank@gmail.com",
-            "homepage": "http://wyrihaximus.net/"
-        }
-    ],
-    "require": {
-        "php": ">=5.4",
-        "wyrihaximus/phunin-node": "dev-master",
-        "cakephp/cakephp": "^3.0"
+  "name": "wyrihaximus/phunin-cake",
+  "type":"cakephp-plugin",
+  "license": "MIT",
+  "keywords": [
+    "munin",
+    "cakephp",
+    "munin-node"
+  ],
+  "authors": [
+    {
+      "name": "Cees-Jan Kiewiet",
+      "email": "ceesjank@gmail.com",
+      "homepage": "http://wyrihaximus.net/"
     }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "wyrihaximus/phunin-node": "dev-master",
+    "cakephp/cakephp": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "WyriHaximus\\PhuninCake\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WyriHaximus\\Tests\\PhuninCake\\": "tests/"
+    }
+  }
 }
