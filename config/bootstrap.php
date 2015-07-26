@@ -9,6 +9,10 @@
  * file that was distributed with this source code.
  */
 
+use Cake\Core\Configure;
+use Cake\Event\EventManager;
+use WyriHaximus\PhuninCake\Event\StockPluginsListener;
+
 Configure::write('PhuninCake', array(
     'Node' => array(
         'connection' => array(
@@ -19,7 +23,4 @@ Configure::write('PhuninCake', array(
     ),
 ));
 
-App::uses('CakeEventManager', 'Event');
-App::uses('PhuninCakeStockPluginsListener', 'PhuninCake.Event');
-
-CakeEventManager::instance()->attach(new PhuninCakeStockPluginsListener());
+EventManager::instance()->on(new StockPluginsListener());

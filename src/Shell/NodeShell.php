@@ -9,34 +9,48 @@
  * file that was distributed with this source code.
  */
 
-App::uses('CakeEvent', 'Event');
-App::uses('CakeEventManager', 'Event');
-App::uses('Security', 'Utility');
+namespace WyriHaximus\PhuninCake\Shell;
 
-class NodeShell extends Shell {
-    
+use Cake\Console\Shell;
+use Cake\Core\Configure;
+use Cake\Event\Event;
+use Cake\Event\EventManager;
+use React\EventLoop\Factory;
+use React\EventLoop\LoopInterface;
+use React\Socket\Server;
+use WyriHaximus\PhuninNode\Node;
+
+class NodeShell extends Shell
+{
+    /**
+     * @var LoopInterface
+     */
     private $loop;
+
+    /**
+     * @var Node
+     */
     private $node;
     
     public function start() {
-        $this->loop = \React\EventLoop\Factory::create();
+        $this->loop = Factory::create();
 
-        $socket = new \React\Socket\Server($this->loop);
+        $socket = new Server($this->loop);
         $socket->listen(Configure::read('PhuninCake.Node.connection.port'), Configure::read('PhuninCake.Node.connection.address'));
 
-        $this->node = new \WyriHaximus\PhuninNode\Node($this->loop, $socket);
+        $this->node = new Node($this->loop, $socket);
         
-        CakeEventManager::instance()->dispatch(new CakeEvent('PhuninCake.Node.start', $this, array(
+        EventManager::instance()->dispatch(new Event('PhuninCake.Node.start', $this, array(
             'loop' => $this->loop,
             'node' => $this->node,
         )));
         
-        $this->runSetupKillSwitch();
+        //$this->runSetupKillSwitch();
         
         $this->loop->run();
     }
     
-    private function runSetupKillSwitch() {
+    /*private function runSetupKillSwitch() {
         $loop = $this->loop;
         $context = new React\ZMQ\Context($this->loop);
         $socket = $context->getSocket(ZMQ::SOCKET_PULL);
@@ -61,6 +75,5 @@ class NodeShell extends Shell {
         );
         
         return serialize($killCommand);
-    }
-    
+    }*/
 }

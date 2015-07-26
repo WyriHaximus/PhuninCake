@@ -1,6 +1,5 @@
 {
     "name": "wyrihaximus/phunin-cake",
-    "type": "cakephp-plugin",
     "license": "MIT",
     "keywords": [
         "munin",
@@ -14,13 +13,9 @@
             "homepage": "http://wyrihaximus.net/"
         }
     ],
-    "config": {
-        "vendor-dir": "Vendor"
-    },
     "require": {
-        "php": ">=5.3.3",
-        "wyrihaximus/phunin-node": "*",
-        "react/zmq": "0.2.*",
-        "composer/installers": "*"
+        "php": ">=5.4",
+        "wyrihaximus/phunin-node": "dev-master",
+        "cakephp/cakephp": "^3.0"
     }
 }
