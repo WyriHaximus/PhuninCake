@@ -11,13 +11,11 @@ PhuninNode CakePHP plugin wrapper
 
 ## Installation ##
 
-Installation is easy with composer just add PhuninCake to your composer.json.
+To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `~`.
 
-    {
-        "require": {
-            "wyrihaximus/phunin-cake": "0.1.*"
-        }
-    }
+```
+composer require wyrihaximus/phunin-cake 
+```
 
 ## Basic usage ##
 
