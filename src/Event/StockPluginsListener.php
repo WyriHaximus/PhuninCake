@@ -18,9 +18,9 @@ class StockPluginsListener implements EventListenerInterface
 {
 
     public function implementedEvents() {
-        return array(
+        return [
             'WyriHaximus.PhuninCake.Node.start' => 'start',
-        );
+        ];
     }
 
     public function start($event) {
