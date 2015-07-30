@@ -40,40 +40,11 @@ class NodeShell extends Shell
 
         $this->node = new Node($this->loop, $socket);
         
-        EventManager::instance()->dispatch(new Event('WyriHaximus.PhuninCake.Node.start', $this, array(
+        EventManager::instance()->dispatch(new Event('WyriHaximus.PhuninCake.Node.start', $this, [
             'loop' => $this->loop,
             'node' => $this->node,
-        )));
-        
-        //$this->runSetupKillSwitch();
-        
+        ]));
+
         $this->loop->run();
     }
-    
-    /*private function runSetupKillSwitch() {
-        $loop = $this->loop;
-        $context = new React\ZMQ\Context($this->loop);
-        $socket = $context->getSocket(ZMQ::SOCKET_PULL);
-        $socket->bind(Configure::read('PhuninCake.Node.killConnection'));
-        $socket->on('message', function($command) use ($loop) {
-            if (Security::hash($command, 'sha256', true) == Security::hash($this->getKillCommand(), 'sha256', true)) {
-                $loop->stop();
-            }
-        });
-    }
-    
-    public function stop() {
-        $zmq = new ZMQContext(1);
-        $nodeConnection = $zmq->getSocket(ZMQ::SOCKET_PUSH, 'xyz');
-        $nodeConnection->connect(Configure::read('PhuninCake.Node.killConnection'));
-        $nodeConnection->send($this->getKillCommand());
-    }
-    
-    private function getKillCommand() {
-        $killCommand = array(
-            'configHash' => Security::hash(serialize(Configure::read('PhuninCake.Node')), 'sha256', true),
-        );
-        
-        return serialize($killCommand);
-    }*/
 }
