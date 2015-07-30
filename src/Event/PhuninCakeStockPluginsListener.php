@@ -19,7 +19,7 @@ class StockPluginsListener implements EventListenerInterface
 
     public function implementedEvents() {
         return array(
-            'PhuninCake.Node.start' => 'start',
+            'WyriHaximus.PhuninCake.Node.start' => 'start',
         );
     }
 

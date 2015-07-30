@@ -36,11 +36,11 @@ class NodeShell extends Shell
         $this->loop = Factory::create();
 
         $socket = new Server($this->loop);
-        $socket->listen(Configure::read('PhuninCake.Node.connection.port'), Configure::read('PhuninCake.Node.connection.address'));
+        $socket->listen(Configure::read('WyriHaximus.PhuninCake.Node.connection.port'), Configure::read('WyriHaximus.PhuninCake.Node.connection.address'));
 
         $this->node = new Node($this->loop, $socket);
         
-        EventManager::instance()->dispatch(new Event('PhuninCake.Node.start', $this, array(
+        EventManager::instance()->dispatch(new Event('WyriHaximus.PhuninCake.Node.start', $this, array(
             'loop' => $this->loop,
             'node' => $this->node,
         )));
