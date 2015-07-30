@@ -15,6 +15,7 @@ use Cake\Console\Shell;
 use Cake\Core\Configure;
 use Cake\Event\Event;
 use Cake\Event\EventManager;
+use PipingBag\Di\PipingBag;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
 use React\Socket\Server;
@@ -32,8 +33,9 @@ class NodeShell extends Shell
      */
     private $node;
     
-    public function start() {
-        $this->loop = Factory::create();
+    public function start()
+    {
+        $this->loop = $this->loopResolver();
 
         $socket = new Server($this->loop);
         $socket->listen(Configure::read('WyriHaximus.PhuninCake.Node.connection.port'), Configure::read('WyriHaximus.PhuninCake.Node.connection.address'));
@@ -46,5 +48,18 @@ class NodeShell extends Shell
         ]));
 
         $this->loop->run();
+    }
+
+    protected function loopResolver()
+    {
+        if (Configure::check('WyriHaximus.PhuninCake.loop') && Configure::read('WyriHaximus.PhuninCake.loop') instanceof LoopInterface) {
+            return Configure::read('WyriHaximus.PhuninCake.loop');
+        }
+
+        if (class_exists('PipingBag\Di\PipingBag') && Configure::check('WyriHaximus.PhuninCake.pipingbag')) {
+            return PipingBag::get(Configure::check('WyriHaximus.PhuninCake.pipingbag'));
+        }
+
+        return Factory::create();
     }
 }
