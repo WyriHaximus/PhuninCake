@@ -2,7 +2,7 @@
 
 return [
     'WyriHaximus' => [
-        'PhuninCake', [
+        'PhuninCake' => [
             'Node' => [
                 'connection' => [
                     'address' => '0.0.0.0',
