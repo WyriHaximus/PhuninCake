@@ -57,7 +57,7 @@ class NodeShell extends Shell
         }
 
         if (class_exists('PipingBag\Di\PipingBag') && Configure::check('WyriHaximus.PhuninCake.pipingbag')) {
-            return PipingBag::get(Configure::get('WyriHaximus.PhuninCake.pipingbag'));
+            return PipingBag::get(Configure::read('WyriHaximus.PhuninCake.pipingbag'));
         }
 
         return Factory::create();
