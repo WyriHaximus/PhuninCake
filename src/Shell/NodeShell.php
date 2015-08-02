@@ -19,6 +19,7 @@ use PipingBag\Di\PipingBag;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
 use React\Socket\Server;
+use WyriHaximus\PhuninNode\Configuration;
 use WyriHaximus\PhuninNode\Node;
 
 class NodeShell extends Shell
@@ -40,9 +41,9 @@ class NodeShell extends Shell
         $socket = new Server($this->loop);
         $socket->listen(Configure::read('WyriHaximus.PhuninCake.Node.connection.port'), Configure::read('WyriHaximus.PhuninCake.Node.connection.address'));
 
-        $config = [];
+        $config = new Configuration();
         if (Configure::check('WyriHaximus.PhuninCake.Node.name')) {
-            $config['hostname'] = Configure::read('WyriHaximus.PhuninCake.Node.name');
+            $config->setPair('hostname', Configure::read('WyriHaximus.PhuninCake.Node.name'));
         }
 
         $this->node = new Node($this->loop, $socket, $config);
