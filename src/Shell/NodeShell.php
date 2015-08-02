@@ -40,7 +40,12 @@ class NodeShell extends Shell
         $socket = new Server($this->loop);
         $socket->listen(Configure::read('WyriHaximus.PhuninCake.Node.connection.port'), Configure::read('WyriHaximus.PhuninCake.Node.connection.address'));
 
-        $this->node = new Node($this->loop, $socket);
+        $config = [];
+        if (Configure::check('WyriHaximus.PhuninCake.Node.name')) {
+            $config['hostname'] = Configure::read('WyriHaximus.PhuninCake.Node.name');
+        }
+
+        $this->node = new Node($this->loop, $socket, $config);
         
         EventManager::instance()->dispatch(new Event('WyriHaximus.PhuninCake.Node.start', $this, [
             'loop' => $this->loop,
