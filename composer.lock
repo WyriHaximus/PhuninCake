@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ad65472917c0c8e36c5cef889fc4888c",
+    "hash": "3052bfa67b6d8ff8bf730f434fabbd70",
+    "content-hash": "a93fbfd17eb34edc8a35359296b2102b",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -502,29 +503,29 @@
         },
         {
             "name": "react/stream",
-            "version": "v0.4.2",
+            "version": "v0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465"
+                "reference": "305b2328d2a2e157bc13b61a0f5c6e41b666b188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
-                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/305b2328d2a2e157bc13b61a0f5c6e41b666b188",
+                "reference": "305b2328d2a2e157bc13b61a0f5c6e41b666b188",
                 "shasum": ""
             },
             "require": {
-                "evenement/evenement": "~2.0",
-                "php": ">=5.4.0"
+                "evenement/evenement": "^2.0|^1.0",
+                "php": ">=5.3.8"
             },
             "require-dev": {
-                "react/event-loop": "0.4.*",
-                "react/promise": "~2.0"
+                "react/event-loop": "^0.4|^0.3",
+                "react/promise": "^2.0|^1.0"
             },
             "suggest": {
-                "react/event-loop": "0.4.*",
-                "react/promise": "~2.0"
+                "react/event-loop": "^0.4",
+                "react/promise": "^2.0"
             },
             "type": "library",
             "extra": {
@@ -546,20 +547,20 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2014-09-10 03:32:31"
+            "time": "2015-10-07 18:32:58"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.2",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "4bfbe0ed3909bfddd75b70c094391ec1f142f860"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "31cb2ad0155c95b88ee55fe12bc7ff92232c1770"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/4bfbe0ed3909bfddd75b70c094391ec1f142f860",
-                "reference": "4bfbe0ed3909bfddd75b70c094391ec1f142f860",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/31cb2ad0155c95b88ee55fe12bc7ff92232c1770",
+                "reference": "31cb2ad0155c95b88ee55fe12bc7ff92232c1770",
                 "shasum": ""
             },
             "require": {
@@ -595,7 +596,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-01 11:25:50"
+            "time": "2015-09-14 14:14:09"
         },
         {
             "name": "wyrihaximus/phunin-node",
@@ -603,12 +604,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "8b02eaa5f6d7fc63b3333b23d238927a22b54510"
+                "reference": "21c01d50990a293063e9c6c435b8c577935fea8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/8b02eaa5f6d7fc63b3333b23d238927a22b54510",
-                "reference": "8b02eaa5f6d7fc63b3333b23d238927a22b54510",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/21c01d50990a293063e9c6c435b8c577935fea8f",
+                "reference": "21c01d50990a293063e9c6c435b8c577935fea8f",
                 "shasum": ""
             },
             "require": {
@@ -619,6 +620,7 @@
                 "symfony/yaml": "^2.4"
             },
             "require-dev": {
+                "php": ">=5.5.0",
                 "phpunit/phpunit": "^4.0",
                 "squizlabs/php_codesniffer": "^1.5",
                 "vectorface/dunit": "^2.0"
@@ -630,7 +632,10 @@
             "autoload": {
                 "psr-4": {
                     "WyriHaximus\\PhuninNode\\": "src/"
-                }
+                },
+                "files": [
+                    "src/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -651,7 +656,7 @@
                 "reactphp",
                 "statistics"
             ],
-            "time": "2015-07-25 14:06:59"
+            "time": "2015-10-10 22:04:49"
         }
     ],
     "packages-dev": [],

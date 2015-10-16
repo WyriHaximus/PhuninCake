@@ -22,7 +22,8 @@
   "autoload": {
     "psr-4": {
       "WyriHaximus\\PhuninCake\\": "src/"
-    }
+    },
+    "files": ["src/functions.php"]
   },
   "autoload-dev": {
     "psr-4": {
