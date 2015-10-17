@@ -13,7 +13,6 @@ namespace WyriHaximus\PhuninCake\Shell;
 
 use Cake\Console\Shell;
 use Cake\Core\Configure;
-use Cake\Event\Event;
 use Cake\Event\EventManager;
 use PipingBag\Di\PipingBag;
 use React\EventLoop\Factory;
@@ -21,6 +20,7 @@ use React\EventLoop\LoopInterface;
 use React\Socket\Server;
 use WyriHaximus\PhuninNode\Configuration;
 use WyriHaximus\PhuninNode\Node;
+use WyriHaximus\Ratchet\Event\StartEvent;
 
 class NodeShell extends Shell
 {
@@ -47,11 +47,8 @@ class NodeShell extends Shell
         }
 
         $this->node = new Node($this->loop, $socket, $config);
-        
-        EventManager::instance()->dispatch(new Event('WyriHaximus.PhuninCake.Node.start', $this, [
-            'loop' => $this->loop,
-            'node' => $this->node,
-        ]));
+
+        EventManager::instance()->dispatch(StartEvent::create($this->loop, $this->node));
 
         $this->loop->run();
     }

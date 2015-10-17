@@ -13,20 +13,21 @@ namespace WyriHaximus\PhuninCake\Event;
 
 use Cake\Event\EventListenerInterface;
 use WyriHaximus\PhuninNode\Plugins;
+use WyriHaximus\Ratchet\Event\StartEvent;
 
 class StockPluginsListener implements EventListenerInterface
 {
 
     public function implementedEvents() {
         return [
-            'WyriHaximus.PhuninCake.Node.start' => 'start',
+            StartEvent::EVENT => 'start',
         ];
     }
 
-    public function start($event) {
-        $event->data['node']->addPlugin(new Plugins\Plugins());
-        $event->data['node']->addPlugin(new Plugins\PluginsCategories());
-        $event->data['node']->addPlugin(new Plugins\MemoryUsage());
-        $event->data['node']->addPlugin(new Plugins\Uptime());
+    public function start(StartEvent $event) {
+        $event->getNode()->addPlugin(new Plugins\Plugins());
+        $event->getNode()->addPlugin(new Plugins\PluginsCategories());
+        $event->getNode()->addPlugin(new Plugins\MemoryUsage());
+        $event->getNode()->addPlugin(new Plugins\Uptime());
     }
 }
