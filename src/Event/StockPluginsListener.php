@@ -17,13 +17,18 @@ use WyriHaximus\Ratchet\Event\StartEvent;
 
 class StockPluginsListener implements EventListenerInterface
 {
-
+    /**
+     * @return array
+     */
     public function implementedEvents() {
         return [
             StartEvent::EVENT => 'start',
         ];
     }
 
+    /**
+     * @param StartEvent $event
+     */
     public function start(StartEvent $event) {
         $event->getNode()->addPlugin(new Plugins\Plugins());
         $event->getNode()->addPlugin(new Plugins\PluginsCategories());
