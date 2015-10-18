@@ -10,6 +10,8 @@
  */
 
 use Cake\Event\EventManager;
+use WyriHaximus\PhuninCake\Event\ConstructListener;
 use WyriHaximus\PhuninCake\Event\StockPluginsListener;
 
+EventManager::instance()->on(new ConstructListener());
 EventManager::instance()->on(new StockPluginsListener());
