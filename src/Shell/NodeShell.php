@@ -13,7 +13,7 @@ namespace WyriHaximus\PhuninCake\Shell;
 
 use Cake\Console\Shell;
 use Cake\Event\EventManager;
-use WyriHaximus\Ratchet\Event\ConstructEvent;
+use WyriHaximus\PhuninCake\Event\ConstructEvent;
 
 class NodeShell extends Shell
 {

@@ -13,7 +13,6 @@ namespace WyriHaximus\PhuninCake\Event;
 
 use Cake\Event\EventListenerInterface;
 use WyriHaximus\PhuninNode\Plugins;
-use WyriHaximus\Ratchet\Event\StartEvent;
 
 class StockPluginsListener implements EventListenerInterface
 {

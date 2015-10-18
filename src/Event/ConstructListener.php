@@ -18,8 +18,6 @@ use React\Socket\Server;
 use WyriHaximus\PhuninNode\Configuration;
 use WyriHaximus\PhuninNode\Node;
 use WyriHaximus\PhuninNode\Plugins;
-use WyriHaximus\Ratchet\Event\ConstructEvent;
-use WyriHaximus\Ratchet\Event\StartEvent;
 
 class ConstructListener implements EventListenerInterface
 {

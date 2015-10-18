@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WyriHaximus\Ratchet\Event;
+namespace WyriHaximus\PhuninCake\Event;
 
 use Cake\Event\Event;
 use React\EventLoop\LoopInterface;
