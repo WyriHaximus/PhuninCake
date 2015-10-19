@@ -30,7 +30,7 @@ class StockPluginsListener implements EventListenerInterface
      */
     public function start(StartEvent $event) {
         $event->getNode()->addPlugin(new Plugins\Plugins());
-        $event->getNode()->addPlugin(new Plugins\PluginsCategories());
+        //$event->getNode()->addPlugin(new Plugins\PluginsCategories());
         $event->getNode()->addPlugin(new Plugins\MemoryUsage());
         $event->getNode()->addPlugin(new Plugins\Uptime());
     }
