@@ -14,9 +14,8 @@ namespace WyriHaximus\PhuninCake\Event;
 use Cake\Core\Configure;
 use Cake\Event\EventListenerInterface;
 use Cake\Event\EventManager;
-use React\Socket\Server;
 use WyriHaximus\PhuninNode\Configuration;
-use WyriHaximus\PhuninNode\Node;
+use WyriHaximus\PhuninNode\Factory as NodeFactory;
 use WyriHaximus\PhuninNode\Plugins;
 
 class ConstructListener implements EventListenerInterface
@@ -37,15 +36,17 @@ class ConstructListener implements EventListenerInterface
     public function construct(ConstructEvent $event)
     {
 
-        $socket = new Server($event->getLoop());
-        $socket->listen(Configure::read('WyriHaximus.PhuninCake.Node.connection.port'), Configure::read('WyriHaximus.PhuninCake.Node.connection.address'));
-
         $config = new Configuration();
         if (Configure::check('WyriHaximus.PhuninCake.Node.name')) {
             $config->setPair('hostname', Configure::read('WyriHaximus.PhuninCake.Node.name'));
         }
 
-        $node = new Node($event->getLoop(), $socket, $config);
+        $node = NodeFactory::create(
+            $event->getLoop(),
+            Configure::read('WyriHaximus.PhuninCake.Node.connection.address'),
+            Configure::read('WyriHaximus.PhuninCake.Node.connection.port'),
+            $config
+        );
 
         EventManager::instance()->dispatch(StartEvent::create($event->getLoop(), $node));
     }
