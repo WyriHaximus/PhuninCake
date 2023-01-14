@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "3052bfa67b6d8ff8bf730f434fabbd70",
     "content-hash": "a93fbfd17eb34edc8a35359296b2102b",
     "packages": [
         {
@@ -46,7 +45,11 @@
                 "aura",
                 "installer"
             ],
-            "time": "2012-11-26 21:35:57"
+            "support": {
+                "issues": "https://github.com/auraphp/installer-default/issues",
+                "source": "https://github.com/auraphp/installer-default/tree/1.0.0"
+            },
+            "time": "2012-11-26T21:35:57+00:00"
         },
         {
             "name": "aura/intl",
@@ -124,20 +127,24 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2014-08-24 00:00:00"
+            "support": {
+                "issues": "https://github.com/auraphp/Aura.Intl/issues",
+                "source": "https://github.com/auraphp/Aura.Intl/tree/1.1.1"
+            },
+            "time": "2014-08-24T00:00:00+00:00"
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.0.10",
+            "version": "3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "2bb38807a5a0ba91d27ec80e702dea6a3bb21e53"
+                "reference": "88e0ff225324d746a2772bbfad128e858692a668"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/2bb38807a5a0ba91d27ec80e702dea6a3bb21e53",
-                "reference": "2bb38807a5a0ba91d27ec80e702dea6a3bb21e53",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/88e0ff225324d746a2772bbfad128e858692a668",
+                "reference": "88e0ff225324d746a2772bbfad128e858692a668",
                 "shasum": ""
             },
             "require": {
@@ -168,21 +175,16 @@
                 "phpunit/phpunit": "*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
             "autoload": {
-                "psr-4": {
-                    "Cake\\": "src"
-                },
                 "files": [
                     "src/Core/functions.php",
                     "src/Collection/functions.php",
                     "src/I18n/functions.php",
                     "src/Utility/bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Cake\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -199,7 +201,13 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-07-21 20:55:01"
+            "support": {
+                "forum": "http://stackoverflow.com/tags/cakephp",
+                "irc": "irc://irc.freenode.org/cakephp",
+                "issues": "https://github.com/cakephp/cakephp/issues",
+                "source": "https://github.com/cakephp/cakephp"
+            },
+            "time": "2016-11-26T04:18:20+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -245,7 +253,7 @@
                 "event-dispatcher",
                 "event-emitter"
             ],
-            "time": "2012-11-02 14:49:47"
+            "time": "2012-11-02T14:49:47+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -287,7 +295,11 @@
                 "hashing",
                 "password"
             ],
-            "time": "2014-11-20 16:49:30"
+            "support": {
+                "issues": "https://github.com/ircmaxell/password_compat/issues",
+                "source": "https://github.com/ircmaxell/password_compat/tree/v1.0"
+            },
+            "time": "2014-11-20T16:49:30+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -333,7 +345,11 @@
                 "datetime",
                 "time"
             ],
-            "time": "2014-09-26 02:52:02"
+            "support": {
+                "issues": "https://github.com/briannesbitt/Carbon/issues",
+                "source": "https://github.com/briannesbitt/Carbon/tree/1.13.0"
+            },
+            "time": "2014-09-26T02:52:02+00:00"
         },
         {
             "name": "psr/log",
@@ -371,7 +387,11 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "support": {
+                "issues": "https://github.com/php-fig/log/issues",
+                "source": "https://github.com/php-fig/log/tree/1.0.0"
+            },
+            "time": "2012-12-21T11:40:51+00:00"
         },
         {
             "name": "react/event-loop",
@@ -414,7 +434,7 @@
             "keywords": [
                 "event-loop"
             ],
-            "time": "2014-02-26 17:36:58"
+            "time": "2014-02-26T17:36:58+00:00"
         },
         {
             "name": "react/promise",
@@ -458,7 +478,7 @@
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2015-07-03 13:48:55"
+            "time": "2015-07-03T13:48:55+00:00"
         },
         {
             "name": "react/socket",
@@ -499,7 +519,7 @@
             "keywords": [
                 "Socket"
             ],
-            "time": "2014-05-25 17:02:16"
+            "time": "2014-05-25T17:02:16+00:00"
         },
         {
             "name": "react/stream",
@@ -547,7 +567,7 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2015-10-07 18:32:58"
+            "time": "2015-10-07T18:32:58+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -596,7 +616,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-14 14:14:09"
+            "time": "2015-09-14T14:14:09+00:00"
         },
         {
             "name": "wyrihaximus/phunin-node",
@@ -656,7 +676,7 @@
                 "reactphp",
                 "statistics"
             ],
-            "time": "2015-10-10 22:04:49"
+            "time": "2015-10-10T22:04:49+00:00"
         }
     ],
     "packages-dev": [],
@@ -670,5 +690,6 @@
     "platform": {
         "php": ">=5.4"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
